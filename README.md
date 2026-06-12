@@ -21,7 +21,7 @@ Todo o conteúdo atual é **ilustrativo** e deve ser substituído pelas informa�
 3. **Estatísticas** — ajuste os atributos `data-count` na seção hero.
 4. **Contatos** — atualize telefone, e-mail e o número do WhatsApp (link `wa.me` no fim do `index.html`).
 5. **Redes sociais** — preencha os `href="#"` da seção de contato com os perfis reais.
-6. **Cores** — a paleta fica nas variáveis CSS no topo de `css/style.css` (`--green-900`, `--gold` etc.).
+6. **Cores** — a paleta segue a identidade visual da logo oficial (azul, amarelo e verde da bandeira de Rondônia) e fica nas variáveis CSS no topo de `css/style.css` (`--navy-900`, `--yellow`, `--green` etc.). Para usar a logo em imagem no lugar da marca vetorial, salve-a como `img/logo.png` e substitua o conteúdo de `.brand` no `index.html`.
 7. **Formulário** — hoje ele abre o e-mail do visitante já preenchido (`mailto:`). Para envio direto, integre um serviço como [Formspree](https://formspree.io) trocando o handler em `js/main.js`.
 
 ## Como publicar no GitHub Pages

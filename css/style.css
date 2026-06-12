@@ -1,22 +1,23 @@
 /* ============================================================
    Site oficial — Vereador Negão Monteiro
-   Paleta: verde-escuro institucional + dourado vibrante
+   Paleta: azul, amarelo e verde da bandeira de Rondônia (logo oficial)
    ============================================================ */
 
 :root {
-  --green-950: #081c11;
-  --green-900: #0d2818;
-  --green-800: #143a23;
-  --green-700: #1d5232;
-  --green-500: #2e8b57;
-  --gold: #ffc83d;
-  --gold-dark: #e0a800;
-  --ink: #16241c;
-  --ink-soft: #4b5d52;
+  /* Cores da identidade visual: bandeira de Rondônia (logo oficial) */
+  --navy-950: #0a1437;
+  --navy-900: #102050;
+  --navy-800: #17306f;
+  --navy-700: #20418f;
+  --green: #00a859;
+  --yellow: #ffce00;
+  --yellow-dark: #e6b800;
+  --ink: #131a2e;
+  --ink-soft: #4a546e;
   --paper: #ffffff;
-  --paper-soft: #f3f7f4;
+  --paper-soft: #f4f6fa;
   --radius: 16px;
-  --shadow: 0 10px 30px rgba(8, 28, 17, 0.12);
+  --shadow: 0 10px 30px rgba(10, 20, 55, 0.12);
   --font-display: "Archivo", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
@@ -57,16 +58,16 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--green-500);
-  background: rgba(46, 139, 87, 0.12);
+  color: var(--green);
+  background: rgba(0, 168, 89, 0.12);
   padding: 6px 14px;
   border-radius: 999px;
   margin-bottom: 16px;
 }
 
 .section-dark .section-tag {
-  color: var(--gold);
-  background: rgba(255, 200, 61, 0.12);
+  color: var(--yellow);
+  background: rgba(255, 206, 0, 0.12);
 }
 
 .section-head { max-width: 640px; margin-bottom: 48px; }
@@ -75,8 +76,8 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 
 .section-dark {
   background:
-    radial-gradient(900px 500px at 85% -10%, rgba(46, 139, 87, 0.35), transparent 60%),
-    var(--green-900);
+    radial-gradient(900px 500px at 85% -10%, rgba(0, 168, 89, 0.35), transparent 60%),
+    var(--navy-900);
   color: #eef5f0;
 }
 
@@ -92,7 +93,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 }
 
 .navbar.scrolled {
-  background: rgba(8, 28, 17, 0.92);
+  background: rgba(10, 20, 55, 0.92);
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
   padding: 10px 0;
@@ -118,30 +119,35 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   place-items: center;
   width: 44px;
   height: 44px;
-  border-radius: 12px;
-  background: var(--gold);
-  color: var(--green-900);
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1rem;
   flex-shrink: 0;
+}
+
+.brand-mark svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
 .brand-text {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  line-height: 1.15;
+  font-size: 1.02rem;
+  line-height: 1.1;
   display: flex;
   flex-direction: column;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
-.brand-text strong { font-weight: 800; }
+.brand-text strong { font-weight: 900; }
 .brand-text small {
+  font-style: normal;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--yellow);
 }
 
 .nav-links {
@@ -158,18 +164,18 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   transition: color 0.2s;
 }
 
-.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover { color: var(--yellow); }
 
 .nav-cta {
-  background: var(--gold);
-  color: var(--green-900) !important;
+  background: var(--yellow);
+  color: var(--navy-900) !important;
   font-weight: 700 !important;
   padding: 10px 20px;
   border-radius: 999px;
   transition: transform 0.2s, background 0.2s;
 }
 
-.nav-cta:hover { background: var(--gold-dark); transform: translateY(-1px); }
+.nav-cta:hover { background: var(--yellow-dark); transform: translateY(-1px); }
 
 .nav-toggle {
   display: none;
@@ -204,9 +210,9 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(1000px 600px at 15% 0%, rgba(46, 139, 87, 0.5), transparent 55%),
-    radial-gradient(800px 500px at 100% 100%, rgba(255, 200, 61, 0.14), transparent 55%),
-    linear-gradient(160deg, var(--green-950) 0%, var(--green-900) 55%, var(--green-800) 100%);
+    radial-gradient(1000px 600px at 15% 0%, rgba(0, 168, 89, 0.5), transparent 55%),
+    radial-gradient(800px 500px at 100% 100%, rgba(255, 206, 0, 0.14), transparent 55%),
+    linear-gradient(160deg, var(--navy-950) 0%, var(--navy-900) 55%, var(--navy-800) 100%);
 }
 
 .hero-bg::after {
@@ -244,7 +250,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 }
 
 .highlight {
-  color: var(--gold);
+  color: var(--yellow);
   position: relative;
 }
 
@@ -271,12 +277,12 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 }
 
 .btn-primary {
-  background: var(--gold);
-  color: var(--green-900);
-  box-shadow: 0 8px 24px rgba(255, 200, 61, 0.35);
+  background: var(--yellow);
+  color: var(--navy-900);
+  box-shadow: 0 8px 24px rgba(255, 206, 0, 0.35);
 }
 
-.btn-primary:hover { background: var(--gold-dark); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
 
 .btn-ghost {
   background: transparent;
@@ -284,7 +290,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   border: 1.5px solid rgba(255, 255, 255, 0.4);
 }
 
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+.btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); transform: translateY(-2px); }
 
 .btn-full { width: 100%; }
 
@@ -299,7 +305,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 900;
-  color: var(--gold);
+  color: var(--yellow);
 }
 
 .stat span { font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); }
@@ -310,7 +316,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 .photo-frame {
   aspect-ratio: 4 / 5;
   border-radius: 24px;
-  background: linear-gradient(160deg, var(--green-700), var(--green-800));
+  background: linear-gradient(160deg, var(--navy-700), var(--navy-800));
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
   overflow: hidden;
@@ -326,7 +332,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 
 .photo-placeholder svg { width: 120px; margin-inline: auto; }
 .photo-placeholder p { margin-top: 12px; font-size: 0.9rem; }
-.photo-placeholder code { color: var(--gold); font-size: 0.8rem; }
+.photo-placeholder code { color: var(--yellow); font-size: 0.8rem; }
 
 .photo-card {
   position: absolute;
@@ -341,7 +347,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 }
 
 .photo-card span { display: block; font-size: 0.92rem; font-style: italic; margin-bottom: 8px; }
-.photo-card strong { font-size: 0.85rem; color: var(--green-500); }
+.photo-card strong { font-size: 0.85rem; color: var(--green); }
 
 /* ===== Sobre ===== */
 .grid-2 {
@@ -371,8 +377,8 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(46, 139, 87, 0.14);
-  color: var(--green-500);
+  background: rgba(0, 168, 89, 0.14);
+  color: var(--green);
   font-weight: 800;
   font-size: 0.8rem;
   display: grid;
@@ -403,7 +409,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   top: 22px;
   bottom: 0;
   width: 2px;
-  background: rgba(46, 139, 87, 0.25);
+  background: rgba(0, 168, 89, 0.25);
 }
 
 .timeline-item:last-child::before { display: none; }
@@ -414,9 +420,9 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   height: 18px;
   margin-top: 4px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--yellow);
   border: 4px solid var(--paper-soft);
-  outline: 2px solid var(--green-500);
+  outline: 2px solid var(--green);
   z-index: 1;
 }
 
@@ -440,7 +446,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 200, 61, 0.5);
+  border-color: rgba(255, 206, 0, 0.5);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -451,7 +457,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   place-items: center;
   font-size: 1.6rem;
   border-radius: 16px;
-  background: rgba(255, 200, 61, 0.14);
+  background: rgba(255, 206, 0, 0.14);
   margin-bottom: 18px;
 }
 
@@ -467,11 +473,11 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 
 .mandato-item {
   background: var(--paper);
-  border: 1px solid rgba(8, 28, 17, 0.08);
-  border-left: 5px solid var(--green-500);
+  border: 1px solid rgba(10, 20, 55, 0.08);
+  border-left: 5px solid var(--green);
   border-radius: var(--radius);
   padding: 26px 28px;
-  box-shadow: 0 4px 18px rgba(8, 28, 17, 0.05);
+  box-shadow: 0 4px 18px rgba(10, 20, 55, 0.05);
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
@@ -483,8 +489,8 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--green-500);
-  background: rgba(46, 139, 87, 0.12);
+  color: var(--green);
+  background: rgba(0, 168, 89, 0.12);
   padding: 4px 12px;
   border-radius: 999px;
   margin-bottom: 12px;
@@ -514,7 +520,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   background: var(--paper);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 18px rgba(8, 28, 17, 0.06);
+  box-shadow: 0 4px 18px rgba(10, 20, 55, 0.06);
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
@@ -525,7 +531,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   place-items: center;
   height: 150px;
   font-size: 3rem;
-  background: linear-gradient(140deg, var(--green-800), var(--green-500));
+  background: linear-gradient(140deg, var(--navy-800), var(--green));
 }
 
 .news-body { padding: 22px 24px 26px; }
@@ -535,7 +541,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--green-500);
+  color: var(--green);
 }
 
 .news-body h3 { font-size: 1.08rem; margin: 8px 0 8px; }
@@ -554,7 +560,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   color: rgba(238, 245, 240, 0.85);
 }
 
-.contact-list a { color: var(--gold); text-decoration: none; }
+.contact-list a { color: var(--yellow); text-decoration: none; }
 .contact-list a:hover { text-decoration: underline; }
 
 .socials { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
@@ -570,7 +576,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   transition: border-color 0.2s, color 0.2s, transform 0.2s;
 }
 
-.socials a:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+.socials a:hover { border-color: var(--yellow); color: var(--yellow); transform: translateY(-2px); }
 
 .contact-form {
   background: rgba(255, 255, 255, 0.06);
@@ -598,7 +604,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: #fff;
-  background: rgba(8, 28, 17, 0.55);
+  background: rgba(10, 20, 55, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   outline: none;
@@ -611,22 +617,22 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(255, 200, 61, 0.18);
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255, 206, 0, 0.18);
 }
 
 .form-feedback {
   margin-top: 14px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--yellow);
   text-align: center;
   min-height: 1.4em;
 }
 
 /* ===== Footer ===== */
 .footer {
-  background: var(--green-950);
+  background: var(--navy-950);
   color: rgba(255, 255, 255, 0.75);
   padding: 44px 0;
 }
@@ -647,7 +653,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   font-size: 0.9rem;
 }
 
-.footer-links a:hover { color: var(--gold); }
+.footer-links a:hover { color: var(--yellow); }
 
 .footer-copy { font-size: 0.82rem; }
 
@@ -707,7 +713,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
     justify-content: center;
     gap: 28px;
     padding: 40px 36px;
-    background: var(--green-950);
+    background: var(--navy-950);
     box-shadow: -20px 0 60px rgba(0, 0, 0, 0.4);
     transform: translateX(100%);
     transition: transform 0.35s ease;
