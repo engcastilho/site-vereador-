@@ -509,6 +509,84 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   display: inline-block;
 }
 
+/* ===== Parceria Ezequiel Neiva ===== */
+.parceria-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.parceria-photo { margin: 0; }
+
+.parceria-photo .parceria-placeholder,
+.parceria-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 24px 50px rgba(10, 20, 55, 0.25);
+}
+
+.parceria-placeholder {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  text-align: center;
+  background: linear-gradient(140deg, var(--navy-800), var(--navy-700));
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.parceria-placeholder span { font-size: 3rem; }
+.parceria-placeholder p { font-size: 0.9rem; }
+.parceria-placeholder code { color: var(--yellow); font-size: 0.8rem; }
+
+.parceria-photo figcaption {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.parceria-content > p { color: var(--ink-soft); margin-bottom: 22px; }
+
+.parceria-content h3 { font-size: 1.15rem; margin: 26px 0 16px; }
+
+.conquista {
+  background: var(--paper);
+  border-radius: var(--radius);
+  border-left: 6px solid var(--green);
+  padding: 24px 26px;
+  box-shadow: 0 6px 22px rgba(10, 20, 55, 0.08);
+}
+
+.conquista-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(0, 168, 89, 0.12);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.conquista-valor {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  font-weight: 900;
+  color: var(--navy-800);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.conquista p { font-size: 0.96rem; color: var(--ink-soft); }
+
 /* ===== Notícias ===== */
 .news-grid {
   display: grid;
@@ -697,6 +775,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
   .cards { grid-template-columns: 1fr 1fr; }
   .news-grid { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
+  .parceria-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {

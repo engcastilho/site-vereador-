@@ -8,6 +8,7 @@ Site institucional moderno, responsivo e leve, feito em HTML, CSS e JavaScript p
 - **Quem sou** — biografia e linha do tempo da trajetória
 - **Bandeiras** — as 6 prioridades do mandato em cards
 - **Mandato em ação** — projetos de lei, indicações, requerimentos e emendas
+- **Parceria** — seção especial com o deputado Ezequiel Neiva e os recursos conquistados/previstos
 - **Notícias** — destaques e prestação de contas
 - **Fale comigo** — contatos, redes sociais e formulário de demandas
 - **Botão flutuante de WhatsApp**
@@ -16,7 +17,7 @@ Site institucional moderno, responsivo e leve, feito em HTML, CSS e JavaScript p
 
 Todo o conteúdo atual é **ilustrativo** e deve ser substituído pelas informações reais do mandato:
 
-1. **Foto oficial** — adicione a imagem em `img/negao-monteiro.jpg` e troque o bloco `.photo-placeholder` no `index.html` por `<img src="img/negao-monteiro.jpg" alt="Vereador Negão Monteiro">`.
+1. **Foto oficial** — adicione a imagem em `img/negao-monteiro.jpg` e troque o bloco `.photo-placeholder` no `index.html` por `<img src="img/negao-monteiro.jpg" alt="Vereador Negão Monteiro">`. O mesmo vale para a foto da seção Parceria: salve-a como `img/parceria-ezequiel-neiva.jpg` e troque o bloco `.parceria-placeholder` por `<img src="img/parceria-ezequiel-neiva.jpg" alt="Negão Monteiro e o deputado Ezequiel Neiva">`.
 2. **Textos** — edite biografia, trajetória, bandeiras, projetos e notícias direto no `index.html`.
 3. **Estatísticas** — ajuste os atributos `data-count` na seção hero.
 4. **Contatos** — atualize telefone, e-mail e o número do WhatsApp (link `wa.me` no fim do `index.html`).
